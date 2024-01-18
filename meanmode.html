@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function meanmode(arr) {
+            let count = 1;
+            let finalcou = 0;
+            let sortarr = arr.sort();
+            let mode;
+            let mean = 0;
+            console.log(sortarr);
+            for (let i = 0; i < sortarr.length; i++) {
+                mean += sortarr[i];
+                if (sortarr[i] === sortarr[i + 1]) {
+                    count++;
+                }
+                else {
+                    if (count > finalcou) {
+                        finalcou = count;
+                        count = 1;
+                        mode = sortarr[i];
+                    }
+                }
+
+            }
+            mean = mean / sortarr.length;
+
+            if (mean === mode) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+
+        }
+        console.log(meanmode([1, 2, 3]));
+    </script>
+</body>
+
+</html>
