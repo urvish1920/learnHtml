@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function upperlower(str) {
+            let newstr = str.split("");
+            let s = "";
+            for (let i = 0; i < newstr.length; i++) {
+                if (newstr[i] === newstr[i].toUpperCase()) {
+                    s += newstr[i].toLowerCase();
+                }
+                else if (newstr[i] === newstr[i].toLowerCase()) {
+                    s += newstr[i].toUpperCase();
+                }
+                else {
+                    s += newstr[i];
+                }
+            }
+            console.log(s);
+        }
+        upperlower("Hello-LOL");
+    </script>
+</body>
+
+</html>
