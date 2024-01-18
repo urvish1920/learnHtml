@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addDesh(str) {
+            let newstr = "";
+            for (let i = 0; i < str.length; i++) {
+                if (Number(str[i]) % 2 !== 0 && Number(str[i + 1]) % 2 !== 0) {
+                    newstr += str[i] + "-";
+                }
+                else {
+                    newstr += str[i];
+                }
+            }
+            return newstr;
+        }
+        console.log(addDesh("99946"))
+    </script>
+</body>
+
+</html>
